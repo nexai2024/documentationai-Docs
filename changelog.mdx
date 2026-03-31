@@ -1,0 +1,100 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to ScamShield, ensuring you stay informed on new features and fixes.
+---
+
+## Recent Updates
+
+<Callout kind="info">
+  Check this changelog regularly to stay updated on new scam detection capabilities, performance improvements, and security enhancements. Enable notifications in your account settings for instant alerts on major releases.
+</Callout>
+
+<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
+  ## New Features
+
+  - Added real-time scanning for dating profiles with behavioral pattern analysis.
+  - Introduced community flagging integration, allowing users to contribute scam reports directly.
+
+  ## Improvements
+
+  - Enhanced NLP engine accuracy by 15% for detecting AI-generated scam scripts.
+  - Optimized mobile app performance, reducing scan times by 40%.
+
+  ## Bug Fixes
+
+  - Fixed intermittent crashes during bulk history scans.
+  - Resolved false positives in legitimate business invoice detection.
+</Update>
+
+<Update label="2024-09-25" description="v1.2.1" tags={["bugfix", "security"]}>
+  ## Security Fixes
+
+  - Patched vulnerability in webhook endpoint handling (CVE-2024-XXXX).
+  - Strengthened encryption for stored scan histories.
+
+  ## Bug Fixes
+
+  - Corrected email forwarding issues in the scanner dashboard.
+  - Fixed UI glitches on high-DPI displays.
+
+  ## Improvements
+
+  - Updated scam database with 5,000+ new patterns from recent fraud rings.
+</Update>
+
+<Update label="2024-09-10" description="v1.2.0" tags={["feature", "breaking"]}>
+  ## New Features
+
+  - Launched voice message analysis for WhatsApp and Telegram scams.
+  - Added API access for enterprise users to integrate scanning into custom workflows.
+
+  ## Breaking Changes
+
+  - Deprecated legacy v1 API endpoints; migrate to v2 for continued support.
+
+  ## Bug Fixes
+
+  - Resolved sync issues between web and mobile scan histories.
+</Update>
+
+## Key Changes Summary
+
+<Columns cols={3}>
+  <Card title="Enhanced Accuracy" icon="zap" href="/docs/features/scanning">
+    New NLP improvements catch sophisticated AI scams that slip past traditional filters.
+  </Card>
+  <Card title="API Integration" icon="code" href="/docs/api">
+    Build custom solutions with our secure API endpoints and webhooks.
+  </Card>
+  <Card title="Mobile Optimizations" icon="smartphone" href="/docs/mobile">
+    Faster scans and smoother performance on iOS and Android devices.
+  </Card>
+</Columns>
+
+## Upcoming Changes
+
+<Expandable title="v1.4.0 Preview (Expected November 2024)" default-open="false">
+  Prepare for multi-language scam detection supporting 10+ languages, advanced image analysis for QR code scams, and automated reporting to authorities.
+
+  <Callout kind="tip">
+    Test beta features in your dashboard settings. Provide feedback via the community forum.
+  </Callout>
+</Expandable>
+
+<Expandable title="Migration Guide for Breaking Changes" default-open="true">
+  If you use the API, update your integration:
+
+  ```javascript
+  // Old v1 endpoint (deprecated)
+  fetch('https://api.scamshield.my/v1/scan', { /* ... */ });
+
+  // New v2 endpoint
+  fetch('https://api.scamshield.my/v2/scan', {
+    method: 'POST',
+    headers: { 'Authorization': `Bearer ${YOUR_API_KEY}` },
+    body: JSON.stringify({ text: 'suspicious message' })
+  });
+  ```
+
+  Review full migration details in the [API docs](/docs/api).
+</Expandable>
